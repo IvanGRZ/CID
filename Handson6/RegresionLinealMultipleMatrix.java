@@ -13,7 +13,6 @@ public class RegresionLinealMultipleMatrix {
 
     }
     
-
     private void ResultadoRegresionMatricial(double [][] encuacion,double x1, double x2){
         String predicciondeEcuacion =  encuacion[0][0] + " + "+ encuacion[1][0] + "x1 + " + encuacion[2][0] +"x2";
         double prediccionsola = encuacion[0][0] + (encuacion[1][0]*x1 + encuacion[2][0]*x2);
@@ -23,11 +22,8 @@ public class RegresionLinealMultipleMatrix {
         System.out.println("single prediction: " + prediccionsola);
     }
 
-
-    
     RegresionLinealMultipleMatrix(double x1, double x2){
         Dataset data = new Dataset();
-        
         Matricial(x1, x2, data);
     }
 }
