@@ -2,16 +2,10 @@ package Handson.Handson6;
 
 public class RegresionLinealMultipleCramer {
 
-    RegresionLinealMultipleCramer(double x1, double x2){
+    public void Cramer(double x1, double x2){
         Dataset data = new Dataset();
         Cramer crm = new Cramer();
         Helper help = new Helper();
-
-        Cramer(x1, x2, data, crm, help);
-    }    
-        
-    private void Cramer(double x1, double x2, Dataset data, Cramer crm, Helper help){
-
         double[][] ecuaciones = help.ecuaciones(data.matriX, data.matriY);
         double[] cramerRes= crm.resolver(ecuaciones);
         ResultadoRegresionCramer(cramerRes,x1,x2);

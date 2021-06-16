@@ -25,8 +25,10 @@ public class RLMAgent extends Agent {
             System.out.println("Ingresa x2: ");
             int x2 = scanner.nextInt();
 
-            RegresionLinealMultipleMatrix mlrM = new RegresionLinealMultipleMatrix(x1,x2);
-            RegresionLinealMultipleCramer mlrC = new RegresionLinealMultipleCramer(x1,x2); 
+            RegresionLinealMultipleMatrix mlrM = new RegresionLinealMultipleMatrix();
+            mlrM.Matricial(x1,x2);
+            RegresionLinealMultipleCramer mlrC = new RegresionLinealMultipleCramer();
+            mlrC.Cramer(x1,x2); 
 
             Scanner reader = new Scanner(System.in);
             System.out.println("1. Hacer otro calculo");
