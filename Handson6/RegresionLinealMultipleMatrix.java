@@ -1,7 +1,12 @@
 package Handson.Handson6;
 
 public class RegresionLinealMultipleMatrix {
-        
+
+    RegresionLinealMultipleMatrix(double x1, double x2){
+        Dataset data = new Dataset();
+        Matricial(x1, x2, data);
+    }
+    
     private void Matricial(double x1, double x2, Dataset data){
         double[][] transpuesta = MatrixAlgebra.transpuesta(data.matriX);
         double[][] auxMult = MatrixAlgebra.multiplicacionMatriz(transpuesta, data.matriX );
@@ -20,10 +25,5 @@ public class RegresionLinealMultipleMatrix {
         System.out.println("Algebra Matricial");
         System.out.println("Y = " + predicciondeEcuacion);
         System.out.println("single prediction: " + prediccionsola);
-    }
-
-    RegresionLinealMultipleMatrix(double x1, double x2){
-        Dataset data = new Dataset();
-        Matricial(x1, x2, data);
     }
 }
